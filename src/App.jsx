@@ -174,7 +174,7 @@ const HeroSection = ({ onGetStarted, onSeeHow }) => {
         </RevealDiv>
         <RevealDiv delay={200}>
           <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto font-light leading-relaxed" style={{ color: 'rgba(44,62,45,0.8)' }}>
-            AI-powered digital employees that handle scheduling, emails, and customer support. Reliable, steady, built for small businesses.
+            Digital employees that handle scheduling, emails, and customer support. Reliable, steady, built for small businesses.
           </p>
         </RevealDiv>
         <RevealDiv delay={300}>
@@ -382,7 +382,7 @@ const NotJustSoftwareSection = () => {
         </svg>
       ),
       title: 'Zero Setup Time',
-      desc: 'Traditional software requires you to set it up. We act as your IT department, handling all the technical configuration and prompt engineering before handover.',
+      desc: 'Traditional software requires you to set it up. We act as your IT department, handling all the technical configuration and setup before handover.',
       delay: 150,
     },
     {
@@ -483,7 +483,7 @@ const WhyPrairieSection = () => {
     {
       icon: <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#8B7355" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>,
       title: 'Secure & Private',
-      desc: 'Your data is locked down. We use enterprise-grade security and absolutely never train public AI models on your private business information.',
+      desc: 'Your data is locked down. We use enterprise-grade security and your private business information is never shared or used for anything other than serving your business.',
       delay: 150,
     },
     {
@@ -556,7 +556,7 @@ const FAQSection = () => {
   const faqs = [
     {
       q: 'Is this just another dumb chatbot?',
-      a: "Not at all. Old chatbots followed rigid decision trees and frustrated customers. Our digital employees use advanced, custom-trained AI to understand context, nuance, and actually solve problems like a human would.",
+      a: "Not at all. Old chatbots followed rigid decision trees and frustrated customers. Our digital employees are custom-trained to understand context, nuance, and actually solve problems the way a real team member would.",
     },
     {
       q: 'How long does training take?',
@@ -635,7 +635,7 @@ const Footer = () => {
             </svg>
             <span className="font-serif text-2xl font-semibold tracking-tight">Prairie Digital</span>
           </div>
-          <p className="text-base max-w-sm leading-relaxed mb-6">Building reliable, easy-to-use digital employees for small businesses across the heartland. Technology that works for you, not the other way around.</p>
+          <p className="text-base max-w-sm leading-relaxed mb-6">Reliable digital employees for small businesses across the heartland. We handle the work so you can focus on what matters.</p>
           <div className="flex gap-4">
             <a href="#" className="w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300" style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}
               onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#D4AF37'; e.currentTarget.style.color = 'white'; }}
@@ -679,27 +679,27 @@ const Footer = () => {
               <a href="#" className="transition-colors" style={{ color: 'rgba(238,242,236,0.6)' }}
                 onMouseEnter={e => { e.currentTarget.style.color = 'white'; }}
                 onMouseLeave={e => { e.currentTarget.style.color = 'rgba(238,242,236,0.6)'; }}>
-                hello@prairiedigital.co
+                hello@prairie-digital.com
               </a>
             </li>
             <li className="flex items-start gap-3">
               <svg className="w-5 h-5 mt-0.5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
-              <span>(555) 123-4567</span>
+              <span>(217) 303-4601</span>
             </li>
             <li className="flex items-start gap-3">
               <svg className="w-5 h-5 mt-0.5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
               </svg>
-              <span>Omaha, Nebraska</span>
+              <span>Springfield, Illinois</span>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto border-t pt-8 flex flex-col md:flex-row justify-between items-center text-sm" style={{ borderColor: 'rgba(255,255,255,0.1)' }}>
-        <p>© 2024 Prairie Digital LLC. All rights reserved.</p>
+        <p>© 2026 Prairie Digital LLC. All rights reserved.</p>
         <div className="flex gap-6 mt-4 md:mt-0">
           {['Privacy Policy', 'Terms of Service'].map((item, i) => (
             <a key={i} href="#" className="transition-colors"
