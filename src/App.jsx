@@ -272,8 +272,8 @@ const CapabilitiesSection = () => {
         </svg>
       ),
       iconBg: 'rgba(212,175,55,0.2)',
-      title: 'Flawless Scheduling',
-      description: 'Coordinates with clients across time zones, finds the perfect slot, and handles rescheduling without double-booking.',
+      title: 'Operations Management',
+      description: 'Runs your daily operations end to end. Manages schedules, coordinates between teams, tracks deadlines, and makes sure nothing falls through the cracks.',
       delay: 0,
     },
     {
@@ -283,8 +283,8 @@ const CapabilitiesSection = () => {
         </svg>
       ),
       iconBg: 'rgba(123,163,129,0.3)',
-      title: 'Customer Support',
-      description: 'Answers common questions instantly, resolves basic issues, and knows exactly when to route complex problems to a human.',
+      title: 'Client Relationship Management',
+      description: 'Builds and maintains client relationships at scale. Remembers every detail, follows up at the right time, and keeps your clients feeling like your only client.',
       delay: 100,
     },
     {
@@ -294,8 +294,8 @@ const CapabilitiesSection = () => {
         </svg>
       ),
       iconBg: 'rgba(212,175,55,0.2)',
-      title: 'Lead Qualification',
-      description: 'Engages website visitors, asks the right questions, and ensures your sales team only talks to warm, ready-to-buy prospects.',
+      title: 'Business Development',
+      description: 'Works your pipeline from first touch to close. Qualifies opportunities, nurtures prospects, prepares proposals, and keeps your revenue engine running.',
       delay: 200,
     },
     {
@@ -305,8 +305,8 @@ const CapabilitiesSection = () => {
         </svg>
       ),
       iconBg: 'rgba(123,163,129,0.3)',
-      title: 'Inbox Management',
-      description: 'Sorts your chaotic inbox, drafts replies to routine inquiries, and surfaces the urgent messages that need your immediate attention.',
+      title: 'Administrative Operations',
+      description: 'Handles the back-office work that eats your week. Communications, document management, vendor coordination, compliance tracking, and reporting.',
       delay: 300,
     },
     {
@@ -316,8 +316,8 @@ const CapabilitiesSection = () => {
         </svg>
       ),
       iconBg: 'rgba(212,175,55,0.2)',
-      title: 'Data Entry',
-      description: 'Takes information from emails, forms, and chats and perfectly syncs it into your CRM, spreadsheets, and billing software.',
+      title: 'Financial Operations',
+      description: 'Manages invoicing, expense tracking, payment follow-ups, and financial reporting. Keeps your books organized and your cash flow visible.',
       delay: 400,
     },
     {
@@ -327,8 +327,8 @@ const CapabilitiesSection = () => {
         </svg>
       ),
       iconBg: 'rgba(123,163,129,0.3)',
-      title: 'Proactive Follow-ups',
-      description: 'Never lets a lead go cold. Automatically checks in with prospects and reminds clients about upcoming appointments or unpaid invoices.',
+      title: 'Process Automation',
+      description: 'Takes your most time-consuming multi-step processes and runs them flawlessly. The workflows unique to your business that no off-the-shelf software can handle.',
       delay: 500,
     },
   ];
@@ -339,7 +339,7 @@ const CapabilitiesSection = () => {
         <RevealDiv className="text-center mb-20">
           <span className="font-bold tracking-widest uppercase text-sm mb-4 block" style={{ color: '#A8C8A8' }}>Capabilities</span>
           <h2 className="font-serif text-4xl md:text-5xl text-white mb-6">What can they do?</h2>
-          <p className="text-xl max-w-2xl mx-auto font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.9)' }}>They excel at the repetitive, structured tasks that keep your human team from doing their best, most creative work.</p>
+          <p className="text-xl max-w-2xl mx-auto font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.9)' }}>From running your day-to-day operations to managing complex client relationships, they handle the workflows that actually move your business forward.</p>
         </RevealDiv>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
