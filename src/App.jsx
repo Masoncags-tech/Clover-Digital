@@ -533,24 +533,14 @@ const TeamSection = () => {
       title: 'Co-Founder',
       bio: 'Started on Wall Street at Deutsche Bank before moving into operations and ecosystem building. Currently leads a technology ecosystem where partner businesses generated over $37 million in revenue last year. Now bringing that same playbook to Main Street.',
       linkedin: 'https://www.linkedin.com/in/mason-cagnoni-18906049/',
+      logos: ['Deutsche Bank', 'DePaul University'],
     },
     {
       name: 'Shannon Sweeney Offen',
       title: 'Co-Founder',
-      bio: 'Background in investment banking and venture. Experienced in financial strategy, deal structuring, and building businesses from the ground up.',
+      bio: 'Over 20 years in capital markets leadership at J.P. Morgan, Citi, and Comerica Bank. Harvard-educated with deep expertise in growth strategy, financial operations, and building high-performing teams. Brings Wall Street rigor to small business operations.',
       linkedin: 'https://www.linkedin.com/in/shannon-sweeney-offen/',
-    },
-    {
-      name: 'Jasper',
-      title: 'Co-Founder',
-      bio: 'Technical architect behind Prairie Digital\'s infrastructure. Builds the systems that make our digital employees reliable, smart, and seamlessly integrated with client operations.',
-      linkedin: '#',
-    },
-    {
-      name: 'Dan',
-      title: 'Co-Founder',
-      bio: 'Handles product development and client experience. Focused on making sure every digital employee we deploy actually works the way a real team member should.',
-      linkedin: '#',
+      logos: ['J.P. Morgan', 'Citi', 'Comerica', 'Harvard'],
     },
   ];
 
@@ -567,7 +557,7 @@ const TeamSection = () => {
               key={i}
               className="bg-white rounded-[2rem] p-8 md:p-10 border transition-all duration-300 hover:-translate-y-1"
               style={{ boxShadow: '0 10px 40px -10px rgba(44, 62, 45, 0.08)', borderColor: 'rgba(238,242,236,0.5)' }}
-              delay={i * 100}
+              delay={i * 150}
             >
               <div className="flex items-center gap-4 mb-5">
                 <div className="w-14 h-14 rounded-full flex items-center justify-center font-serif text-xl font-bold" style={{ backgroundColor: i % 2 === 0 ? 'rgba(212,175,55,0.15)' : 'rgba(123,163,129,0.2)', color: i % 2 === 0 ? '#B8962B' : '#587a5e' }}>
@@ -578,7 +568,14 @@ const TeamSection = () => {
                   <span className="text-sm font-semibold tracking-wide uppercase" style={{ color: '#8B7355' }}>{member.title}</span>
                 </div>
               </div>
-              <p className="text-base leading-relaxed mb-4" style={{ color: '#4A5548' }}>{member.bio}</p>
+              <p className="text-base leading-relaxed mb-5" style={{ color: '#4A5548' }}>{member.bio}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {member.logos.map((logo, j) => (
+                  <span key={j} className="inline-block px-3 py-1.5 rounded-lg text-xs font-bold tracking-wide border" style={{ backgroundColor: '#F9F6F0', borderColor: '#DEE6DC', color: '#2C3E2D' }}>
+                    {logo}
+                  </span>
+                ))}
+              </div>
               {member.linkedin !== '#' && (
                 <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-200" style={{ color: '#8B7355' }}
                   onMouseEnter={e => { e.currentTarget.style.color = '#D4AF37'; }}
