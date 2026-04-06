@@ -373,11 +373,46 @@ const CapabilitiesSection = () => {
           <p className="text-xl max-w-2xl mx-auto font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.9)' }}>From running your day-to-day operations to managing complex client relationships, they handle the workflows that actually move your business forward.</p>
         </RevealDiv>
 
-        <div className="flex items-center gap-4">
-          {/* Left Arrow - hidden on mobile, sits outside cards */}
+        {/* Scrollable container */}
+        <div
+          ref={scrollRef}
+          onScroll={handleScroll}
+          id="cap-scroll"
+          className="flex gap-6 overflow-x-auto px-2"
+          style={{
+            scrollSnapType: 'x mandatory',
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+            WebkitOverflowScrolling: 'touch',
+          }}
+        >
+          <style>{`#cap-scroll::-webkit-scrollbar { display: none; }`}</style>
+          {capabilities.map((cap, i) => (
+            <div
+              key={i}
+              className="backdrop-blur-sm border rounded-[2rem] p-8 transition-all duration-300 group cursor-default flex-shrink-0"
+              style={{
+                backgroundColor: 'rgba(255,255,255,0.1)',
+                borderColor: 'rgba(255,255,255,0.2)',
+                scrollSnapAlign: 'start',
+                width: visibleCount === 1 ? '100%' : visibleCount === 2 ? 'calc(50% - 12px)' : 'calc(33.333% - 16px)',
+                minWidth: visibleCount === 1 ? '100%' : visibleCount === 2 ? 'calc(50% - 12px)' : 'calc(33.333% - 16px)',
+              }}
+            >
+              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style={{ backgroundColor: cap.iconBg }}>
+                {cap.icon}
+              </div>
+              <h3 className="font-serif text-2xl text-white mb-3">{cap.title}</h3>
+              <p className="text-lg leading-relaxed" style={{ color: 'rgba(255,255,255,0.8)' }}>{cap.description}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Navigation: arrows + dots in a row, arrows hidden on mobile */}
+        <div className="flex items-center justify-center gap-4 mt-8">
           <button
             onClick={() => scrollTo(activeIndex - 1)}
-            className="hidden md:flex flex-shrink-0 w-12 h-12 rounded-full items-center justify-center transition-all duration-300"
+            className="hidden md:flex w-10 h-10 rounded-full items-center justify-center transition-all duration-300"
             style={{
               backgroundColor: activeIndex === 0 ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.2)',
               opacity: activeIndex === 0 ? 0.4 : 1,
@@ -385,51 +420,29 @@ const CapabilitiesSection = () => {
             }}
             disabled={activeIndex === 0}
           >
-            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="15 18 9 12 15 6" />
             </svg>
           </button>
 
-          {/* Scrollable container */}
-          <div className="flex-1 overflow-hidden"><div
-            ref={scrollRef}
-            onScroll={handleScroll}
-            id="cap-scroll"
-            className="flex gap-6 overflow-x-auto px-2"
-            style={{
-              scrollSnapType: 'x mandatory',
-              scrollbarWidth: 'none',
-              msOverflowStyle: 'none',
-              WebkitOverflowScrolling: 'touch',
-            }}
-          >
-            <style>{`#cap-scroll::-webkit-scrollbar { display: none; }`}</style>
-            {capabilities.map((cap, i) => (
-              <div
+          <div className="flex items-center gap-2">
+            {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+              <button
                 key={i}
-                className="backdrop-blur-sm border rounded-[2rem] p-8 transition-all duration-300 group cursor-default flex-shrink-0"
+                onClick={() => scrollTo(i)}
+                className="rounded-full transition-all duration-300"
                 style={{
-                  backgroundColor: 'rgba(255,255,255,0.1)',
-                  borderColor: 'rgba(255,255,255,0.2)',
-                  scrollSnapAlign: 'start',
-                  width: visibleCount === 1 ? '100%' : visibleCount === 2 ? 'calc(50% - 12px)' : 'calc(33.333% - 16px)',
-                  minWidth: visibleCount === 1 ? '100%' : visibleCount === 2 ? 'calc(50% - 12px)' : 'calc(33.333% - 16px)',
+                  width: activeIndex === i ? '24px' : '8px',
+                  height: '8px',
+                  backgroundColor: activeIndex === i ? '#D4AF37' : 'rgba(255,255,255,0.3)',
                 }}
-              >
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style={{ backgroundColor: cap.iconBg }}>
-                  {cap.icon}
-                </div>
-                <h3 className="font-serif text-2xl text-white mb-3">{cap.title}</h3>
-                <p className="text-lg leading-relaxed" style={{ color: 'rgba(255,255,255,0.8)' }}>{cap.description}</p>
-              </div>
+              />
             ))}
           </div>
-          </div>
 
-          {/* Right Arrow - hidden on mobile, sits outside cards */}
           <button
             onClick={() => scrollTo(activeIndex + 1)}
-            className="hidden md:flex flex-shrink-0 w-12 h-12 rounded-full items-center justify-center transition-all duration-300"
+            className="hidden md:flex w-10 h-10 rounded-full items-center justify-center transition-all duration-300"
             style={{
               backgroundColor: activeIndex >= maxIndex ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.2)',
               opacity: activeIndex >= maxIndex ? 0.4 : 1,
@@ -437,26 +450,10 @@ const CapabilitiesSection = () => {
             }}
             disabled={activeIndex >= maxIndex}
           >
-            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="9 18 15 12 9 6" />
             </svg>
           </button>
-        </div>
-
-        {/* Dot indicators */}
-        <div className="flex justify-center gap-2 mt-8">
-          {Array.from({ length: maxIndex + 1 }).map((_, i) => (
-            <button
-              key={i}
-              onClick={() => scrollTo(i)}
-              className="rounded-full transition-all duration-300"
-              style={{
-                width: activeIndex === i ? '24px' : '8px',
-                height: '8px',
-                backgroundColor: activeIndex === i ? '#D4AF37' : 'rgba(255,255,255,0.3)',
-              }}
-            />
-          ))}
         </div>
       </div>
     </section>
