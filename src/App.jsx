@@ -373,11 +373,11 @@ const CapabilitiesSection = () => {
           <p className="text-xl max-w-2xl mx-auto font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.9)' }}>From running your day-to-day operations to managing complex client relationships, they handle the workflows that actually move your business forward.</p>
         </RevealDiv>
 
-        <div className="relative">
-          {/* Left Arrow */}
+        <div className="flex items-center gap-4">
+          {/* Left Arrow - hidden on mobile, sits outside cards */}
           <button
             onClick={() => scrollTo(activeIndex - 1)}
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-300"
+            className="hidden md:flex flex-shrink-0 w-12 h-12 rounded-full items-center justify-center transition-all duration-300"
             style={{
               backgroundColor: activeIndex === 0 ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.2)',
               opacity: activeIndex === 0 ? 0.4 : 1,
@@ -385,29 +385,13 @@ const CapabilitiesSection = () => {
             }}
             disabled={activeIndex === 0}
           >
-            <svg className="w-5 h-5 md:w-6 md:h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="15 18 9 12 15 6" />
             </svg>
           </button>
 
-          {/* Right Arrow */}
-          <button
-            onClick={() => scrollTo(activeIndex + 1)}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-300"
-            style={{
-              backgroundColor: activeIndex >= maxIndex ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.2)',
-              opacity: activeIndex >= maxIndex ? 0.4 : 1,
-              cursor: activeIndex >= maxIndex ? 'default' : 'pointer',
-            }}
-            disabled={activeIndex >= maxIndex}
-          >
-            <svg className="w-5 h-5 md:w-6 md:h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </button>
-
           {/* Scrollable container */}
-          <div
+          <div className="flex-1 overflow-hidden"><div
             ref={scrollRef}
             onScroll={handleScroll}
             id="cap-scroll"
@@ -440,6 +424,23 @@ const CapabilitiesSection = () => {
               </div>
             ))}
           </div>
+          </div>
+
+          {/* Right Arrow - hidden on mobile, sits outside cards */}
+          <button
+            onClick={() => scrollTo(activeIndex + 1)}
+            className="hidden md:flex flex-shrink-0 w-12 h-12 rounded-full items-center justify-center transition-all duration-300"
+            style={{
+              backgroundColor: activeIndex >= maxIndex ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.2)',
+              opacity: activeIndex >= maxIndex ? 0.4 : 1,
+              cursor: activeIndex >= maxIndex ? 'default' : 'pointer',
+            }}
+            disabled={activeIndex >= maxIndex}
+          >
+            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
         </div>
 
         {/* Dot indicators */}
