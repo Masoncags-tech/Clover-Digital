@@ -377,7 +377,7 @@ const CapabilitiesSection = () => {
           {/* Left Arrow */}
           <button
             onClick={() => scrollTo(activeIndex - 1)}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-5 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-300"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-300"
             style={{
               backgroundColor: activeIndex === 0 ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.2)',
               opacity: activeIndex === 0 ? 0.4 : 1,
@@ -393,7 +393,7 @@ const CapabilitiesSection = () => {
           {/* Right Arrow */}
           <button
             onClick={() => scrollTo(activeIndex + 1)}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-5 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-300"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-300"
             style={{
               backgroundColor: activeIndex >= maxIndex ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.2)',
               opacity: activeIndex >= maxIndex ? 0.4 : 1,
@@ -410,6 +410,7 @@ const CapabilitiesSection = () => {
           <div
             ref={scrollRef}
             onScroll={handleScroll}
+            id="cap-scroll"
             className="flex gap-6 overflow-x-auto px-2"
             style={{
               scrollSnapType: 'x mandatory',
@@ -1046,7 +1047,7 @@ const App = () => {
     style.textContent = `
       @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Nunito:wght@300;400;500;600;700&display=swap');
       * { box-sizing: border-box; }
-      body { margin: 0; font-family: 'Nunito', sans-serif; }
+      html, body { margin: 0; font-family: 'Nunito', sans-serif; overflow-x: hidden; width: 100%; }
       .font-serif { font-family: 'Lora', serif; }
       .font-sans { font-family: 'Nunito', sans-serif; }
       ::selection { background-color: #D4AF37; color: white; }
