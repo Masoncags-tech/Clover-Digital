@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "vite build && rm -rf assets && mkdir assets && cp -r dist/assets/* assets/ && cp dist/index.html index.html",
     "lint": "eslint .",
     "preview": "vite preview"
   },
