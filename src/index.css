@@ -219,3 +219,59 @@ section { position: relative; }
 .footer-legal a:hover { color: var(--white); }
 
 .text-center { text-align: center; }
+
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 767px) {
+  /* Reduce section padding on mobile */
+  .how-it-works { padding: 64px 0 72px; }
+  .capabilities { padding: 64px 0 72px; }
+  .why-us { padding: 64px 0 72px; }
+  .stats { padding: 56px 0; }
+  .testimonial { padding: 56px 0 64px; }
+  .trust { padding: 40px 0 56px; }
+  .faq { padding: 64px 0 72px; }
+  .cta { padding: 64px 0 72px; }
+  .footer { padding: 48px 0 32px; }
+
+  /* Tighter grid margins on mobile */
+  .steps-grid { margin-top: 36px; }
+  .cap-grid { margin-top: 36px; }
+  .why-grid { margin-top: 36px; }
+  .stats-header { margin-bottom: 36px; }
+  .faq-header { margin-bottom: 36px; }
+
+  /* Hero adjustments */
+  .hero-content { padding: 40px 20px 0; }
+  .hero-sub { margin-bottom: 32px; }
+  .hero-actions { flex-direction: column; align-items: center; gap: 12px; }
+  .btn-primary, .btn-secondary { width: 100%; max-width: 320px; justify-content: center; }
+
+  /* Hide clouds on very small screens to avoid clutter */
+  .cloud-4 { display: none; }
+  .cloud-1 { width: 140px; height: 42px; left: 3%; }
+  .cloud-1::before { width: 70px; height: 62px; top: -35px; left: 24px; }
+  .cloud-1::after { width: 84px; height: 54px; top: -26px; left: 56px; }
+  .cloud-2 { width: 120px; height: 36px; right: 5%; }
+  .cloud-2::before { width: 60px; height: 52px; top: -28px; left: 16px; }
+  .cloud-2::after { width: 74px; height: 45px; top: -22px; left: 42px; }
+
+  /* Card padding tightened */
+  .step-card { padding: 28px 24px; }
+  .cap-card { padding: 24px 20px; }
+  .why-card { padding: 24px 20px; }
+  .stat-card { padding: 32px 20px; }
+
+  /* Trust pills - allow wrapping to 2x2 */
+  .trust-pills { gap: 8px; }
+  .trust-pill { padding: 8px 14px; font-size: 0.8125rem; }
+
+  /* FAQ touch targets */
+  .faq-question { padding: 20px 0; font-size: 1rem; }
+
+  /* Footer stacking */
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .footer-grid { gap: 32px; }
+
+  /* Quote mark smaller on mobile */
+  .quote-mark { font-size: 4rem; margin-bottom: -28px; }
+}

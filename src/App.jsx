@@ -51,6 +51,45 @@ function HomePage() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // Mobile optimizations injected via JS to bypass Vite/Lightning CSS stripping
+  useEffect(() => {
+    const style = document.createElement('style')
+    style.textContent = `
+      @media (max-width: 767px) {
+        .how-it-works, .capabilities, .why-us, .faq, .cta { padding: 64px 0 72px; }
+        .stats { padding: 56px 0; }
+        .testimonial { padding: 56px 0 64px; }
+        .trust { padding: 40px 0 56px; }
+        .footer { padding: 48px 0 32px; }
+        .steps-grid, .cap-grid, .why-grid { margin-top: 36px; }
+        .stats-header, .faq-header { margin-bottom: 36px; }
+        .hero-content { padding: 40px 20px 0; }
+        .hero-sub { margin-bottom: 32px; }
+        .hero-actions { flex-direction: column; align-items: center; gap: 12px; }
+        .btn-primary, .btn-secondary { width: 100%; max-width: 320px; justify-content: center; }
+        .cloud-4 { display: none; }
+        .cloud-1 { width: 140px; height: 42px; left: 3%; }
+        .cloud-1::before { width: 70px; height: 62px; top: -35px; left: 24px; }
+        .cloud-1::after { width: 84px; height: 54px; top: -26px; left: 56px; }
+        .cloud-2 { width: 120px; height: 36px; right: 5%; }
+        .cloud-2::before { width: 60px; height: 52px; top: -28px; left: 16px; }
+        .cloud-2::after { width: 74px; height: 45px; top: -22px; left: 42px; }
+        .step-card { padding: 28px 24px; }
+        .cap-card { padding: 24px 20px; }
+        .why-card { padding: 24px 20px; }
+        .stat-card { padding: 32px 20px; }
+        .trust-pills { gap: 8px; }
+        .trust-pill { padding: 8px 14px; font-size: 0.8125rem; }
+        .faq-question { padding: 20px 0; font-size: 1rem; }
+        .footer-bottom { flex-direction: column; align-items: flex-start; }
+        .footer-grid { gap: 32px; }
+        .quote-mark { font-size: 4rem; margin-bottom: -28px; }
+      }
+    `
+    document.head.appendChild(style)
+    return () => document.head.removeChild(style)
+  }, [])
+
   const closeMobile = useCallback(() => setMobileOpen(false), [])
 
   const toggleFaq = useCallback((i) => setOpenFaq(prev => prev === i ? null : i), [])
@@ -96,6 +135,7 @@ function HomePage() {
         <a href="#cta" onClick={closeMobile}>Get Started</a>
       </div>
 
+      <main>
       {/* HERO */}
       <section className="hero">
         <div className="landscape">
@@ -410,6 +450,7 @@ function HomePage() {
       </section>
 
       {/* FOOTER */}
+      </main>
       <footer className="footer">
         <div className="container">
           <div className="footer-grid">
