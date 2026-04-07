@@ -107,7 +107,7 @@ section { position: relative; }
 /* Section labels */
 .section-label { font-size: 0.75rem; font-weight: 700; color: var(--green-400); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 16px; }
 .section-label-light { color: var(--green-200); }
-.section-subtitle { font-size: clamp(1rem, 1.5vw, 1.125rem); color: var(--text-muted); max-width: 560px; line-height: 1.7; }
+.section-subtitle { font-size: clamp(1rem, 1.5vw, 1.125rem); color: var(--text-muted); max-width: 560px; line-height: 1.7; text-align: center; margin-left: auto; margin-right: auto; }
 .section-subtitle-light { color: var(--text-light-muted); }
 
 /* ===== ICON SYSTEM ===== */
