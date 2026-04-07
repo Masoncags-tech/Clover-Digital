@@ -65,6 +65,7 @@ function HomePage() {
         .footer { padding: 48px 0 32px; }
         .steps-grid, .cap-grid-desktop, .why-grid { margin-top: 36px; }
         .stats-header, .faq-header { margin-bottom: 36px; }
+        .hero { min-height: 100dvh; min-height: -webkit-fill-available; }
         .hero-content { padding: 40px 20px 0; }
         .hero-sub { margin-bottom: 32px; }
         .hero-actions { flex-direction: column; align-items: center; gap: 12px; }
@@ -84,8 +85,9 @@ function HomePage() {
         .footer-bottom { flex-direction: column; align-items: flex-start; }
         .footer-grid { gap: 32px; }
         .quote-mark { font-size: 4rem; margin-bottom: -28px; }
-        .landscape { height: 40vh; min-height: 200px; }
-        .landscape svg { display: block; }
+        .landscape { height: 15vh; min-height: 80px; max-height: 120px; }
+        .hills-desktop { display: none !important; }
+        .hills-mobile { display: block !important; }
       }
     `
     document.head.appendChild(style)
@@ -174,7 +176,8 @@ function HomePage() {
           <div className="cloud cloud-4"></div>
         </div>
         <div className="landscape">
-          <svg viewBox="0 0 1440 200" preserveAspectRatio="none" style={{ position: 'absolute', bottom: 0, width: '100%', height: '100%' }}>
+          {/* Desktop hills */}
+          <svg className="hills-desktop" viewBox="0 0 1440 200" preserveAspectRatio="none" style={{ position: 'absolute', bottom: 0, width: '100%', height: '100%' }}>
             <defs>
               <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#5A8F62" /><stop offset="100%" stopColor="#3A6B42" /></linearGradient>
               <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#4A7B52" /><stop offset="100%" stopColor="#2C5A34" /></linearGradient>
@@ -183,6 +186,17 @@ function HomePage() {
             <path d="M0 120 Q200 80 400 110 Q600 85 800 105 Q1000 80 1200 100 Q1350 85 1440 110 L1440 200 L0 200Z" fill="url(#hill1)" opacity="0.5" />
             <path d="M0 145 Q180 110 360 135 Q540 105 720 130 Q900 110 1080 140 Q1260 120 1440 145 L1440 200 L0 200Z" fill="url(#hill2)" opacity="0.7" />
             <path d="M0 165 Q160 145 320 158 Q480 140 640 155 Q800 145 960 160 Q1120 148 1280 158 Q1380 150 1440 165 L1440 200 L0 200Z" fill="url(#hill3)" />
+          </svg>
+          {/* Mobile hills - proportioned for narrow screens, gentle rolling curves */}
+          <svg className="hills-mobile" viewBox="0 0 400 60" preserveAspectRatio="none" style={{ position: 'absolute', bottom: 0, width: '100%', height: '100%' }}>
+            <defs>
+              <linearGradient id="mhill1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#5A8F62" /><stop offset="100%" stopColor="#3A6B42" /></linearGradient>
+              <linearGradient id="mhill2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#4A7B52" /><stop offset="100%" stopColor="#2C5A34" /></linearGradient>
+              <linearGradient id="mhill3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#3A6843" /><stop offset="100%" stopColor="#2C3E2D" /></linearGradient>
+            </defs>
+            <path d="M0 30 Q60 22 120 28 Q200 20 280 27 Q350 22 400 30 L400 60 L0 60Z" fill="url(#mhill1)" opacity="0.5" />
+            <path d="M0 38 Q50 30 130 36 Q210 28 290 35 Q360 30 400 38 L400 60 L0 60Z" fill="url(#mhill2)" opacity="0.7" />
+            <path d="M0 45 Q70 40 150 43 Q230 38 310 42 Q370 40 400 45 L400 60 L0 60Z" fill="url(#mhill3)" />
           </svg>
         </div>
         <div className="hero-content">
