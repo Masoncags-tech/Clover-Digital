@@ -65,7 +65,7 @@ function HomePage() {
         .footer { padding: 48px 0 32px; }
         .steps-grid, .cap-grid-desktop, .why-grid { margin-top: 36px; }
         .stats-header, .faq-header { margin-bottom: 36px; }
-        .hero { min-height: 100dvh; min-height: -webkit-fill-available; }
+        .hero { min-height: 100vh; min-height: 100dvh; min-height: -webkit-fill-available; }
         .hero-content { padding: 40px 20px 0; }
         .hero-sub { margin-bottom: 32px; }
         .hero-actions { flex-direction: column; align-items: center; gap: 12px; }

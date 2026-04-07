@@ -69,7 +69,7 @@ section { position: relative; }
 .mobile-menu a { display: block; padding: 16px 0; font-size: 1.25rem; font-weight: 600; color: var(--text-primary); text-decoration: none; border-bottom: 1px solid rgba(44,62,45,0.08); }
 
 /* ===== HERO ===== */
-.hero { min-height: 100dvh; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; padding-top: 72px; background: linear-gradient(180deg, #C8DFEE 0%, #B0D0E4 40%, #A3C5D8 70%, #F9F6F0 100%); }
+.hero { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; padding-top: 72px; background: linear-gradient(180deg, #C8DFEE 0%, #B0D0E4 40%, #A3C5D8 70%, #F9F6F0 100%); }
 .landscape { position: absolute; bottom: 0; left: 0; right: 0; height: 160px; pointer-events: none; z-index: 1; }
 @media (min-width: 768px) { .landscape { height: 200px; } }
 .hills-mobile { display: none; }
