@@ -25,15 +25,15 @@ function RevealDiv({ className = '', delay = 0, children, as: Tag = 'div' }) {
 
 /* ── FAQ Item ── */
 function FaqItem({ question, answer, isOpen, onToggle, delay }) {
-  const answerRef = useRef(null)
+  const innerRef = useRef(null)
   return (
     <RevealDiv className={`faq-item${isOpen ? ' open' : ''}`} delay={delay}>
       <button className="faq-question" onClick={onToggle}>
         <span>{question}</span>
         <span className="faq-icon">+</span>
       </button>
-      <div className="faq-answer" ref={answerRef} style={{ maxHeight: isOpen ? answerRef.current?.scrollHeight + 'px' : '0' }}>
-        <div className="faq-answer-inner">{answer}</div>
+      <div className="faq-answer" style={{ maxHeight: isOpen ? (innerRef.current?.offsetHeight || 200) + 'px' : '0' }}>
+        <div className="faq-answer-inner" ref={innerRef}>{answer}</div>
       </div>
     </RevealDiv>
   )
@@ -287,9 +287,9 @@ function HomePage() {
             </div>
           </div>
         </div>
-        <div className="wave-divider">
+        <div className="wave-divider" style={{ bottom: '-1px', transform: 'none' }}>
           <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style={{ height: '60px' }}>
-            <path d="M0 0 Q360 50 720 20 Q1080 50 1440 10 L1440 60 L0 60Z" fill="#ffffff" />
+            <path d="M0 60 Q360 0 720 30 Q1080 60 1440 10 L1440 60Z" fill="#ffffff" />
           </svg>
         </div>
       </section>
