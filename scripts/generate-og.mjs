@@ -14,6 +14,17 @@ const clover = (cx, cy, r, rot, fill) => `
     <circle cx="${cx + r * 0.55}" cy="${cy + r * 0.55}" r="${r}"/>
   </g>`
 
+const dottedClover = (cx, cy, r, rot, fill, centerColor) => `
+  <g transform="rotate(${rot} ${cx} ${cy})">
+    <g fill="${fill}">
+      <circle cx="${cx - r * 0.55}" cy="${cy - r * 0.55}" r="${r}"/>
+      <circle cx="${cx + r * 0.55}" cy="${cy - r * 0.55}" r="${r}"/>
+      <circle cx="${cx - r * 0.55}" cy="${cy + r * 0.55}" r="${r}"/>
+      <circle cx="${cx + r * 0.55}" cy="${cy + r * 0.55}" r="${r}"/>
+    </g>
+    <circle cx="${cx}" cy="${cy}" r="${r * 0.38}" fill="${centerColor}"/>
+  </g>`
+
 const cloverLogo = (cx, cy, r, color, centerColor) => `
   <g>
     <ellipse cx="${cx - r * 0.6}" cy="${cy - r * 0.55}" rx="${r}" ry="${r * 1.05}" fill="${color}"/>
@@ -71,11 +82,11 @@ const svg = `
   <text x="${W / 2}" y="370" text-anchor="middle"
         font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="600"
         font-size="120" letter-spacing="-2">
-    <tspan fill="#4a8b67">Clover </tspan><tspan fill="#0f2a1d">Dıgital</tspan>
+    <tspan fill="#4a8b67">Clover </tspan><tspan fill="#ffffff">Dıgital</tspan>
   </text>
 
-  <!-- Clover-as-dot above the first i in Digital (no stem) -->
-  ${clover(734, 282, 12, -6, '#0f2a1d')}
+  <!-- Clover-as-dot above the first i in Digital (no stem), with center dot -->
+  ${dottedClover(736, 274, 16, -6, '#ffffff', '#4a8b67')}
 
   <!-- Tagline -->
   <text x="${W / 2}" y="425" text-anchor="middle"
