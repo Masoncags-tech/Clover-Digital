@@ -39,7 +39,7 @@ const cloverLogo = (cx, cy, r, color, centerColor) => `
 const svg = `
 <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
   <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="${H}" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#C8DFEE"/>
       <stop offset="50%" stop-color="#B0D0E4"/>
       <stop offset="100%" stop-color="#A3C5D8"/>
@@ -82,12 +82,14 @@ const svg = `
   <text x="${W / 2}" y="370" text-anchor="middle"
         font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="600"
         font-size="120" letter-spacing="-2">
-    <tspan fill="#4a8b67">Clover </tspan><tspan fill="#ffffff">Dıgıtal</tspan>
+    <tspan fill="#4a8b67">Clover </tspan><tspan fill="#ffffff">Digital</tspan>
   </text>
 
-  <!-- Clover-as-dots above both dotless i's in Digital -->
-  ${dottedClover(736, 274, 16, 0, '#4a8b67', '#ffffff')}
-  ${dottedClover(855, 274, 16, 0, '#4a8b67', '#ffffff')}
+  <!-- Sky-colored coverup (page-relative gradient so it blends) hides the o glyph -->
+  <ellipse cx="423" cy="335" rx="40" ry="42" fill="url(#sky)"/>
+
+  <!-- Clover-as-o centered over the now-hidden "o" -->
+  ${dottedClover(423, 335, 26, 0, '#4a8b67', '#ffffff')}
 
   <!-- Tagline -->
   <text x="${W / 2}" y="425" text-anchor="middle"
