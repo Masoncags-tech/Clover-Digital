@@ -342,15 +342,7 @@ function HomePage() {
         </div>
         <div className="foliage" aria-hidden="true">
           <div className="tree tree-1"></div>
-          <div className="tree tree-2"></div>
-          <div className="tree tree-3"></div>
-          <div className="tree tree-4"></div>
           <div className="tree tree-5"></div>
-          <div className="bush bush-1"></div>
-          <div className="bush bush-2"></div>
-          <div className="bush bush-3"></div>
-          <div className="bush bush-4"></div>
-          <div className="bush bush-5"></div>
         </div>
         <div className="hero-content">
 
