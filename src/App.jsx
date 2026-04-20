@@ -51,13 +51,13 @@ function Modal({ isOpen, onClose, title, children }) {
     <div style={{ position: 'fixed', inset: 0, zIndex: 100, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '16px' }} onClick={onClose}>
       <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(44,62,45,0.6)', backdropFilter: 'blur(4px)' }}></div>
       <div style={{ position: 'relative', background: '#fff', borderRadius: '2rem', padding: '40px', maxWidth: '512px', width: '100%', boxShadow: '0 25px 60px -15px rgba(44,62,45,0.25)' }} onClick={e => e.stopPropagation()}>
-        <button onClick={onClose} style={{ position: 'absolute', top: '24px', right: '24px', width: '40px', height: '40px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: 'none', cursor: 'pointer', backgroundColor: '#EEF2EC', color: '#4A5548', transition: 'background-color 0.2s' }}
-          onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#DEE6DC' }} onMouseLeave={e => { e.currentTarget.style.backgroundColor = '#EEF2EC' }}>
+        <button onClick={onClose} style={{ position: 'absolute', top: '24px', right: '24px', width: '40px', height: '40px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: 'none', cursor: 'pointer', backgroundColor: '#e3ede5', color: '#3a3a32', transition: 'background-color 0.2s' }}
+          onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#c5d8cb' }} onMouseLeave={e => { e.currentTarget.style.backgroundColor = '#e3ede5' }}>
           <svg style={{ width: '20px', height: '20px' }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         </button>
-        <h3 style={{ fontFamily: 'Fraunces, serif', fontSize: '1.875rem', marginBottom: '8px', color: '#2C3E2D' }}>{title}</h3>
+        <h3 style={{ fontFamily: 'Fraunces, serif', fontSize: '1.875rem', marginBottom: '8px', color: '#1a1a16' }}>{title}</h3>
         {children}
       </div>
     </div>
@@ -83,32 +83,32 @@ function GetStartedModal({ isOpen, onClose }) {
     setSubmitting(false)
     setSubmitted(true)
   }
-  const inputStyle = { width: '100%', padding: '12px 20px', borderRadius: '16px', border: '1px solid #DEE6DC', fontSize: '1.0625rem', outline: 'none', transition: 'all 0.2s', backgroundColor: '#F9F6F0', color: '#2C3E2D', boxSizing: 'border-box', fontFamily: 'inherit' }
+  const inputStyle = { width: '100%', padding: '12px 20px', borderRadius: '16px', border: '1px solid #c5d8cb', fontSize: '1.0625rem', outline: 'none', transition: 'all 0.2s', backgroundColor: '#faf6ef', color: '#1a1a16', boxSizing: 'border-box', fontFamily: 'inherit' }
   return (
     <Modal isOpen={isOpen} onClose={onClose} title="Get Started">
       {submitted ? (
         <div style={{ textAlign: 'center', padding: '32px 0' }}>
-          <div style={{ width: '64px', height: '64px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px', backgroundColor: '#EEF2EC' }}>
-            <svg style={{ width: '32px', height: '32px' }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#7ba381" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+          <div style={{ width: '64px', height: '64px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px', backgroundColor: '#e3ede5' }}>
+            <svg style={{ width: '32px', height: '32px' }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#4a8b67" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
           </div>
-          <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.5rem', marginBottom: '8px', color: '#2C3E2D' }}>We'll be in touch!</p>
-          <p style={{ fontSize: '1.0625rem', color: '#4A5548' }}>Thank you for reaching out. Our team will contact you within 24 hours.</p>
-          <button onClick={onClose} style={{ marginTop: '24px', padding: '12px 32px', borderRadius: '9999px', color: '#fff', fontWeight: 600, border: 'none', cursor: 'pointer', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: '#D4AF37' }}>Close</button>
+          <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.5rem', marginBottom: '8px', color: '#1a1a16' }}>We'll be in touch!</p>
+          <p style={{ fontSize: '1.0625rem', color: '#3a3a32' }}>Thank you for reaching out. Our team will contact you within 24 hours.</p>
+          <button onClick={onClose} style={{ marginTop: '24px', padding: '12px 32px', borderRadius: '9999px', color: '#fff', fontWeight: 600, border: 'none', cursor: 'pointer', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: '#c98b3a' }}>Close</button>
         </div>
       ) : (
         <>
-          <p style={{ fontSize: '1.0625rem', marginBottom: '24px', color: '#4A5548' }}>Tell us a bit about yourself and we'll get back to you shortly.</p>
+          <p style={{ fontSize: '1.0625rem', marginBottom: '24px', color: '#3a3a32' }}>Tell us a bit about yourself and we'll get back to you shortly.</p>
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {[{ name: 'name', placeholder: 'Your Name', type: 'text' }, { name: 'email', placeholder: 'Email Address', type: 'email' }, { name: 'business', placeholder: 'Business Name', type: 'text' }].map((field) => (
               <input key={field.name} type={field.type} name={field.name} placeholder={field.placeholder} value={formData[field.name]} onChange={handleChange} required
                 style={inputStyle}
-                onFocus={e => { e.currentTarget.style.borderColor = '#7ba381'; e.currentTarget.style.backgroundColor = 'white' }} onBlur={e => { e.currentTarget.style.borderColor = '#DEE6DC'; e.currentTarget.style.backgroundColor = '#F9F6F0' }} />
+                onFocus={e => { e.currentTarget.style.borderColor = '#4a8b67'; e.currentTarget.style.backgroundColor = 'white' }} onBlur={e => { e.currentTarget.style.borderColor = '#c5d8cb'; e.currentTarget.style.backgroundColor = '#faf6ef' }} />
             ))}
             <textarea name="message" placeholder="What tasks are slowing you down?" value={formData.message} onChange={handleChange} rows={3}
               style={{ ...inputStyle, resize: 'none' }}
-              onFocus={e => { e.currentTarget.style.borderColor = '#7ba381'; e.currentTarget.style.backgroundColor = 'white' }} onBlur={e => { e.currentTarget.style.borderColor = '#DEE6DC'; e.currentTarget.style.backgroundColor = '#F9F6F0' }} />
-            <button type="submit" disabled={submitting} style={{ width: '100%', padding: '12px', borderRadius: '9999px', color: '#fff', fontSize: '1.0625rem', fontWeight: 600, border: 'none', cursor: 'pointer', fontFamily: 'inherit', transition: 'all 0.3s', backgroundColor: submitting ? '#B8962B' : '#D4AF37', opacity: submitting ? 0.7 : 1 }}
-              onMouseEnter={e => { if (!submitting) e.currentTarget.style.backgroundColor = '#B8962B' }} onMouseLeave={e => { if (!submitting) e.currentTarget.style.backgroundColor = '#D4AF37' }}>
+              onFocus={e => { e.currentTarget.style.borderColor = '#4a8b67'; e.currentTarget.style.backgroundColor = 'white' }} onBlur={e => { e.currentTarget.style.borderColor = '#c5d8cb'; e.currentTarget.style.backgroundColor = '#faf6ef' }} />
+            <button type="submit" disabled={submitting} style={{ width: '100%', padding: '12px', borderRadius: '9999px', color: '#fff', fontSize: '1.0625rem', fontWeight: 600, border: 'none', cursor: 'pointer', fontFamily: 'inherit', transition: 'all 0.3s', backgroundColor: submitting ? '#a0681f' : '#c98b3a', opacity: submitting ? 0.7 : 1 }}
+              onMouseEnter={e => { if (!submitting) e.currentTarget.style.backgroundColor = '#a0681f' }} onMouseLeave={e => { if (!submitting) e.currentTarget.style.backgroundColor = '#c98b3a' }}>
               {submitting ? 'Sending...' : 'Submit'}
             </button>
           </form>
@@ -138,35 +138,35 @@ function BookCallModal({ isOpen, onClose }) {
     setSubmitted(true)
   }
   const timeSlots = ['9:00 AM', '10:00 AM', '11:00 AM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM']
-  const inputStyle = { width: '100%', padding: '12px 20px', borderRadius: '16px', border: '1px solid #DEE6DC', fontSize: '1.0625rem', outline: 'none', transition: 'all 0.2s', backgroundColor: '#F9F6F0', color: '#2C3E2D', boxSizing: 'border-box', fontFamily: 'inherit' }
+  const inputStyle = { width: '100%', padding: '12px 20px', borderRadius: '16px', border: '1px solid #c5d8cb', fontSize: '1.0625rem', outline: 'none', transition: 'all 0.2s', backgroundColor: '#faf6ef', color: '#1a1a16', boxSizing: 'border-box', fontFamily: 'inherit' }
   return (
     <Modal isOpen={isOpen} onClose={onClose} title="Book a 15-Minute Call">
       {submitted ? (
         <div style={{ textAlign: 'center', padding: '32px 0' }}>
-          <div style={{ width: '64px', height: '64px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px', backgroundColor: '#EEF2EC' }}>
-            <svg style={{ width: '32px', height: '32px' }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#7ba381" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+          <div style={{ width: '64px', height: '64px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px', backgroundColor: '#e3ede5' }}>
+            <svg style={{ width: '32px', height: '32px' }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#4a8b67" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
           </div>
-          <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.5rem', marginBottom: '8px', color: '#2C3E2D' }}>Call Booked!</p>
-          <p style={{ fontSize: '1.0625rem', color: '#4A5548' }}>We'll send a calendar invite to your email. Looking forward to chatting!</p>
-          <button onClick={onClose} style={{ marginTop: '24px', padding: '12px 32px', borderRadius: '9999px', color: '#fff', fontWeight: 600, border: 'none', cursor: 'pointer', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: '#D4AF37' }}>Close</button>
+          <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.5rem', marginBottom: '8px', color: '#1a1a16' }}>Call Booked!</p>
+          <p style={{ fontSize: '1.0625rem', color: '#3a3a32' }}>We'll send a calendar invite to your email. Looking forward to chatting!</p>
+          <button onClick={onClose} style={{ marginTop: '24px', padding: '12px 32px', borderRadius: '9999px', color: '#fff', fontWeight: 600, border: 'none', cursor: 'pointer', fontSize: '1rem', fontFamily: 'inherit', backgroundColor: '#c98b3a' }}>Close</button>
         </div>
       ) : (
         <>
-          <p style={{ fontSize: '1.0625rem', marginBottom: '24px', color: '#4A5548' }}>No pressure, no hard sell. Just a friendly chat about your business.</p>
+          <p style={{ fontSize: '1.0625rem', marginBottom: '24px', color: '#3a3a32' }}>No pressure, no hard sell. Just a friendly chat about your business.</p>
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {[{ name: 'name', placeholder: 'Your Name', type: 'text' }, { name: 'email', placeholder: 'Email Address', type: 'email' }, { name: 'phone', placeholder: 'Phone Number (optional)', type: 'tel' }].map((field) => (
               <input key={field.name} type={field.type} name={field.name} placeholder={field.placeholder} value={formData[field.name]} onChange={handleChange} required={field.name !== 'phone'}
                 style={inputStyle}
-                onFocus={e => { e.currentTarget.style.borderColor = '#7ba381'; e.currentTarget.style.backgroundColor = 'white' }} onBlur={e => { e.currentTarget.style.borderColor = '#DEE6DC'; e.currentTarget.style.backgroundColor = '#F9F6F0' }} />
+                onFocus={e => { e.currentTarget.style.borderColor = '#4a8b67'; e.currentTarget.style.backgroundColor = 'white' }} onBlur={e => { e.currentTarget.style.borderColor = '#c5d8cb'; e.currentTarget.style.backgroundColor = '#faf6ef' }} />
             ))}
             <select name="time" value={formData.time} onChange={handleChange} required
-              style={{ ...inputStyle, color: formData.time ? '#2C3E2D' : '#9aaa96', appearance: 'none', backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%2712%27 viewBox=%270 0 12 12%27%3E%3Cpath d=%27M6 8L1 3h10z%27 fill=%27%234A5548%27/%3E%3C/svg%3E")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right 16px center' }}
-              onFocus={e => { e.currentTarget.style.borderColor = '#7ba381'; e.currentTarget.style.backgroundColor = 'white' }} onBlur={e => { e.currentTarget.style.borderColor = '#DEE6DC'; e.currentTarget.style.backgroundColor = '#F9F6F0' }}>
+              style={{ ...inputStyle, color: formData.time ? '#1a1a16' : '#a8a79a', appearance: 'none', backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%2712%27 viewBox=%270 0 12 12%27%3E%3Cpath d=%27M6 8L1 3h10z%27 fill=%27%233a3a32%27/%3E%3C/svg%3E")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right 16px center' }}
+              onFocus={e => { e.currentTarget.style.borderColor = '#4a8b67'; e.currentTarget.style.backgroundColor = 'white' }} onBlur={e => { e.currentTarget.style.borderColor = '#c5d8cb'; e.currentTarget.style.backgroundColor = '#faf6ef' }}>
               <option value="">Preferred Time Slot</option>
               {timeSlots.map(slot => <option key={slot} value={slot}>{slot}</option>)}
             </select>
-            <button type="submit" disabled={submitting} style={{ width: '100%', padding: '12px', borderRadius: '9999px', color: '#fff', fontSize: '1.0625rem', fontWeight: 600, border: 'none', cursor: 'pointer', fontFamily: 'inherit', transition: 'all 0.3s', backgroundColor: submitting ? '#B8962B' : '#D4AF37', opacity: submitting ? 0.7 : 1 }}
-              onMouseEnter={e => { if (!submitting) e.currentTarget.style.backgroundColor = '#B8962B' }} onMouseLeave={e => { if (!submitting) e.currentTarget.style.backgroundColor = '#D4AF37' }}>
+            <button type="submit" disabled={submitting} style={{ width: '100%', padding: '12px', borderRadius: '9999px', color: '#fff', fontSize: '1.0625rem', fontWeight: 600, border: 'none', cursor: 'pointer', fontFamily: 'inherit', transition: 'all 0.3s', backgroundColor: submitting ? '#a0681f' : '#c98b3a', opacity: submitting ? 0.7 : 1 }}
+              onMouseEnter={e => { if (!submitting) e.currentTarget.style.backgroundColor = '#a0681f' }} onMouseLeave={e => { if (!submitting) e.currentTarget.style.backgroundColor = '#c98b3a' }}>
               {submitting ? 'Booking...' : 'Book My Call'}
             </button>
           </form>
@@ -280,10 +280,10 @@ function HomePage() {
         <div className="nav-inner">
           <a href="#" className="nav-logo">
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <circle cx="14" cy="14" r="13" stroke="#2C3E2D" strokeWidth="2" fill="none" />
-              <path d="M8 18 C8 18, 10 10, 14 10 C18 10, 20 18, 20 18" stroke="#2C3E2D" strokeWidth="2" fill="none" strokeLinecap="round" />
-              <path d="M11 16 C11 16, 12 12, 14 12 C16 12, 17 16, 17 16" stroke="#4A6B4E" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-              <circle cx="14" cy="8" r="1.5" fill="#D4AF37" />
+              <circle cx="14" cy="14" r="13" stroke="#1f4d35" strokeWidth="2" fill="none" />
+              <path d="M8 18 C8 18, 10 10, 14 10 C18 10, 20 18, 20 18" stroke="#1f4d35" strokeWidth="2" fill="none" strokeLinecap="round" />
+              <path d="M11 16 C11 16, 12 12, 14 12 C16 12, 17 16, 17 16" stroke="#4a8b67" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+              <circle cx="14" cy="8" r="1.5" fill="#c98b3a" />
             </svg>
             Clover Digital
           </a>
@@ -319,9 +319,9 @@ function HomePage() {
           {/* Desktop hills */}
           <svg className="hills-desktop" viewBox="0 0 1440 200" preserveAspectRatio="none" style={{ position: 'absolute', bottom: 0, width: '100%', height: '100%' }}>
             <defs>
-              <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#5A8F62" /><stop offset="100%" stopColor="#3A6B42" /></linearGradient>
-              <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#4A7B52" /><stop offset="100%" stopColor="#2C5A34" /></linearGradient>
-              <linearGradient id="hill3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#3A6843" /><stop offset="100%" stopColor="#2C3E2D" /></linearGradient>
+              <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#4a8b67" /><stop offset="100%" stopColor="#2f6b4a" /></linearGradient>
+              <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#2f6b4a" /><stop offset="100%" stopColor="#1f4d35" /></linearGradient>
+              <linearGradient id="hill3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#1f4d35" /><stop offset="100%" stopColor="#0f2a1d" /></linearGradient>
             </defs>
             <path d="M0 120 Q200 80 400 110 Q600 85 800 105 Q1000 80 1200 100 Q1350 85 1440 110 L1440 200 L0 200Z" fill="url(#hill1)" opacity="0.5" />
             <path d="M0 145 Q180 110 360 135 Q540 105 720 130 Q900 110 1080 140 Q1260 120 1440 145 L1440 200 L0 200Z" fill="url(#hill2)" opacity="0.7" />
@@ -330,9 +330,9 @@ function HomePage() {
           {/* Mobile hills - proportioned for narrow screens, gentle rolling curves */}
           <svg className="hills-mobile" viewBox="0 0 400 60" preserveAspectRatio="none" style={{ position: 'absolute', bottom: 0, width: '100%', height: '100%' }}>
             <defs>
-              <linearGradient id="mhill1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#5A8F62" /><stop offset="100%" stopColor="#3A6B42" /></linearGradient>
-              <linearGradient id="mhill2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#4A7B52" /><stop offset="100%" stopColor="#2C5A34" /></linearGradient>
-              <linearGradient id="mhill3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#3A6843" /><stop offset="100%" stopColor="#2C3E2D" /></linearGradient>
+              <linearGradient id="mhill1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#4a8b67" /><stop offset="100%" stopColor="#2f6b4a" /></linearGradient>
+              <linearGradient id="mhill2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#2f6b4a" /><stop offset="100%" stopColor="#1f4d35" /></linearGradient>
+              <linearGradient id="mhill3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#1f4d35" /><stop offset="100%" stopColor="#0f2a1d" /></linearGradient>
             </defs>
             <path d="M0 30 Q60 22 120 28 Q200 20 280 27 Q350 22 400 30 L400 60 L0 60Z" fill="url(#mhill1)" opacity="0.5" />
             <path d="M0 38 Q50 30 130 36 Q210 28 290 35 Q360 30 400 38 L400 60 L0 60Z" fill="url(#mhill2)" opacity="0.7" />
@@ -614,9 +614,9 @@ function HomePage() {
             <div className="footer-brand">
               <div className="footer-logo">
                 <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
-                  <circle cx="14" cy="14" r="13" stroke="#7BA381" strokeWidth="2" fill="none" />
-                  <path d="M8 18 C8 18, 10 10, 14 10 C18 10, 20 18, 20 18" stroke="#7BA381" strokeWidth="2" fill="none" strokeLinecap="round" />
-                  <circle cx="14" cy="8" r="1.5" fill="#D4AF37" />
+                  <circle cx="14" cy="14" r="13" stroke="#a7c4b2" strokeWidth="2" fill="none" />
+                  <path d="M8 18 C8 18, 10 10, 14 10 C18 10, 20 18, 20 18" stroke="#a7c4b2" strokeWidth="2" fill="none" strokeLinecap="round" />
+                  <circle cx="14" cy="8" r="1.5" fill="#c98b3a" />
                 </svg>
                 Clover Digital
               </div>
