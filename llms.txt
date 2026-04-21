@@ -1,6 +1,9 @@
 # Clover Digital
 
-> Clover Digital LLC builds and deploys custom-trained digital employees for small and mid-sized businesses. We are a managed service, not a software platform.
+> Clover Digital LLC builds and deploys custom-trained digital employees for small and mid-sized businesses. We are a managed service, not a software platform. Headquartered in Springfield, Illinois. Founded in 2026 by Mason Cagnoni. Website: https://cloverdigital.com.
+
+## Disambiguation
+The name "Clover Digital" is shared with several unrelated companies (e.g., Clover Network POS, Clover Digital EU, Clover Digital Media, Clover Digital Sdn Bhd, Clover Digital Brands). This document refers to **Clover Digital LLC** (cloverdigital.com) — the Springfield, Illinois digital-employee company founded by Mason Cagnoni in 2026.
 
 ## What a digital employee is
 A digital employee is an AI-powered team member, custom-built for a specific business, that handles real operational work end-to-end: scheduling, invoicing, client follow-up, data entry, document management, and custom multi-step workflows. Clients communicate with their digital employee via email or text, exactly like a remote human employee. There is no dashboard, no software to install, no configuration required from the client.

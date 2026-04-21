@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
 Sitemap: https://cloverdigital.com/sitemap.xml
+
+# AI / LLM crawlers — entity reference
+# https://cloverdigital.com/llms.txt
+# https://cloverdigital.com/llms-full.txt
