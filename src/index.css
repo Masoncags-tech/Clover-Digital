@@ -240,7 +240,11 @@ section { position: relative; }
 
 /* ===== INBOX DEMO (iMessage phone) ===== */
 .inbox-demo { padding: 100px 0 120px; background: var(--cream); }
-.inbox-demo-frame { margin-top: 56px; display: flex; justify-content: center; }
+.inbox-demo-layout { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 80px; align-items: center; max-width: 960px; margin: 0 auto; }
+.inbox-demo-text { text-align: left; max-width: 440px; }
+.inbox-demo-text h2 { text-wrap: balance; }
+.inbox-demo-text .section-subtitle { text-align: left; margin: 16px 0 0; max-width: 420px; text-wrap: pretty; }
+.inbox-demo-frame { display: flex; justify-content: center; }
 
 .imsg-phone {
   --imsg-blue: #0A84FF;
@@ -323,6 +327,13 @@ section { position: relative; }
 .imsg-home-indicator { height: 5px; width: 120px; background: #000; border-radius: 3px; margin: 6px auto 8px; flex-shrink: 0; }
 
 @media (max-width: 800px) { .imsg-phone { transform: rotate(0deg); max-width: 240px; } }
+
+@media (max-width: 900px) {
+  .inbox-demo-layout { grid-template-columns: 1fr; gap: 40px; max-width: 560px; text-align: center; }
+  .inbox-demo-text { max-width: none; text-align: center; margin: 0 auto; }
+  .inbox-demo-text .section-subtitle { text-align: center; margin: 16px auto 0; }
+  .inbox-demo-text h2 br { display: none; }
+}
 
 /* ===== MOBILE OPTIMIZATION ===== */
 @media (max-width: 767px) {

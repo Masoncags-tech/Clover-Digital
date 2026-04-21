@@ -538,14 +538,16 @@ function HomePage() {
       {/* INBOX DEMO */}
       <section className="inbox-demo" id="in-practice">
         <div className="container">
-          <div className="text-center">
-            <RevealDiv as="span" className="section-label">In Practice</RevealDiv>
-            <RevealDiv as="h2" delay={1}>One text. Done by end of day.</RevealDiv>
-            <RevealDiv as="p" className="section-subtitle" delay={2} style={{ margin: '16px auto 0' }}>A typical Monday morning handoff. Scheduling, invoicing, follow-up — handled the way a real team member would.</RevealDiv>
+          <div className="inbox-demo-layout">
+            <div className="inbox-demo-text">
+              <RevealDiv as="span" className="section-label">In Practice</RevealDiv>
+              <RevealDiv as="h2" delay={1}>One text.<br />Done by end of day.</RevealDiv>
+              <RevealDiv as="p" className="section-subtitle" delay={2}>A typical Monday morning handoff. Scheduling, invoicing, follow-up&nbsp;— handled the way a real team member would.</RevealDiv>
+            </div>
+            <RevealDiv className="inbox-demo-frame" delay={2}>
+              <InboxThread />
+            </RevealDiv>
           </div>
-          <RevealDiv className="inbox-demo-frame" delay={2}>
-            <InboxThread />
-          </RevealDiv>
         </div>
       </section>
 
