@@ -553,7 +553,7 @@ function HomePage() {
       <section className="capabilities" id="capabilities">
         <div className="wave-divider" style={{ top: '-1px', bottom: 'auto', transform: 'rotate(180deg)' }}>
           <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style={{ height: '60px' }}>
-            <path d="M0 60 Q360 0 720 30 Q1080 60 1440 10 L1440 60Z" fill="#ffffff" />
+            <path d="M0 60 Q360 0 720 30 Q1080 60 1440 10 L1440 60Z" fill="#faf6ef" />
           </svg>
         </div>
         <div className="container">
