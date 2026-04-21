@@ -1,34 +1,52 @@
 # Clover Digital
 
-## About
-Clover Digital LLC is a digital employee company based in Springfield, Illinois. We build and deploy custom digital employees for small and medium-sized businesses across the United States, with a focus on the Midwest.
+> Clover Digital LLC builds and deploys custom-trained digital employees for small and mid-sized businesses. We are a managed service, not a software platform.
 
-## What We Do
-We staff businesses with digital employees that handle real operational work: operations management, client relationship management, business development, administrative operations, financial operations, and custom process automation. Our digital employees are not chatbots. They run entire workflows, manage client pipelines, handle back-office operations, and integrate with the tools businesses already use.
+## What a digital employee is
+A digital employee is an AI-powered team member, custom-built for a specific business, that handles real operational work end-to-end: scheduling, invoicing, client follow-up, data entry, document management, and custom multi-step workflows. Clients communicate with their digital employee via email or text, exactly like a remote human employee. There is no dashboard, no software to install, no configuration required from the client.
 
-## How We Work
-1. We learn your business through a single discovery conversation.
-2. Our team builds and trains a digital employee custom-fitted to your workflows, tools, and tone of voice.
-3. Your new employee goes live and starts handling work immediately. You communicate with them via email or text, just like a human team member.
-4. We monitor, improve, and manage the employee behind the scenes. The client never touches a dashboard.
+## What Clover Digital does
+- **Operations management** — daily operations, team coordination, deadline tracking, workflow orchestration.
+- **Client relationship management** — client communication, follow-ups, retention, relationship maintenance at scale.
+- **Business development** — pipeline management, prospect nurturing, proposal preparation, revenue operations.
+- **Administrative operations** — back-office work, document management, vendor coordination, compliance tracking, reporting.
+- **Financial operations** — invoicing, expense tracking, payment follow-ups, AR collections, financial reporting.
+- **Process automation** — custom multi-step workflow automation tailored to unique business processes that no off-the-shelf software covers.
 
-## Who We Serve
-Small and medium-sized businesses including: automotive dealerships, real estate agencies, plumbing and HVAC companies, contractors, professional services firms, law firms, medical clinics, boutiques, and creative agencies.
+## What Clover Digital is not
+- Not a chatbot. Chatbots follow decision trees. Our digital employees execute multi-step workflows across tools.
+- Not a SaaS platform. The client never logs into a dashboard or configures a tool.
+- Not an offshore virtual assistant. No time zones, no sick days, no onboarding overhead, no linear cost scaling.
+- Not one-size-fits-all. Every digital employee is custom-built for one business.
 
-## Key Differentiators
-- We are a service company, not a software platform. Clients hire an employee, not a tool.
-- Zero learning curve. No dashboards. No setup required from the client.
-- Human team monitoring and improving every digital employee.
-- Custom-built for each business. Not one-size-fits-all.
-- Flat monthly pricing. No usage tiers or surprise charges.
+## How it works
+1. **Discovery** — a single 60 to 90 minute conversation to learn the business.
+2. **Build** — 3 to 7 days of internal build, testing, and QA. Client is not involved.
+3. **Handoff** — a 30 minute introduction and the digital employee goes live.
+4. **Monitoring** — ongoing invisible management, improvement, and support by the Clover team.
 
-## Contact
-- Website: https://cloverdigital.com
-- Email: hello@cloverdigital.com
-- Phone: (217) 303-4601
-- Location: Springfield, Illinois, USA
+Total time from discovery to live: typically 7 to 10 days.
+
+## Pricing
+Flat monthly fee between $500 and $2,500 depending on scope, plus a one-time setup fee of $500 to $1,000. Priced against the cost of a part-time human administrative hire, not software licensing. No usage tiers, no surprise overage charges.
+
+## Who Clover serves
+Small and mid-sized businesses across the Midwest United States:
+home services (plumbing, HVAC, electrical, contractors), real estate agencies and appraisal firms, law firms, medical and dental clinics, boutique retail, creative agencies, automotive dealerships, professional services.
 
 ## Company
-- Legal Name: Clover Digital LLC
-- Incorporated: Delaware, USA
+- Legal name: Clover Digital LLC
+- Headquarters: Springfield, Illinois, USA
 - Founded: 2026
+- Registered: Delaware, USA
+- Website: https://cloverdigital.com
+- Email: hello@cloverdigital.com
+- Phone: +1 (217) 303-4601
+
+## Primary differentiators
+- Managed service, not software — the client hires an employee, not a tool.
+- Zero learning curve — no dashboards, no configuration, no new apps.
+- Custom-built per client — trained on your specific tools, workflows, and tone of voice.
+- Human-in-the-loop monitoring — real Clover team members oversee every digital employee continuously.
+- Predictable pricing — flat monthly fee, no usage tiers, no surprise costs.
+- Midwestern, Main Street focus — built for businesses that are too small for enterprise software and too lean to hire an ops manager.
